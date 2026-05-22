@@ -1,0 +1,380 @@
+/* --- VARIABLES REVOLUCIONARIAS --- */
+:root {
+    --rojo-soviet: #cc0000;
+    --rojo-oscuro: #8b0000;
+    --oro-pueblo: #ffcc00;
+    --negro-carbon: #1a1a1a;
+    --crema-papel: #f4ebd9; /* Da el toque vintage de periódico antiguo */
+    --fuente-fuerte: 'Oswald', sans-serif;
+    --fuente-maquina: 'Special Elite', monospace;
+}
+
+/* --- RESET Y ESTILOS BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--crema-papel);
+    color: var(--negro-carbon);
+    font-family: var(--fuente-maquina);
+    overflow-x: hidden;
+    /* Textura sutil de papel viejo usando gradientes */
+    background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 0),
+                      radial-gradient(rgba(0,0,0,0.05) 1px, transparent 0);
+    background-size: 4px 4px;
+    background-position: 0 0, 2px 2px;
+}
+
+/* --- TEXTO MARCHANTE (PROPAGANDA CONTINUA) --- */
+.ticker-wrapper {
+    background: var(--negro-carbon);
+    color: var(--oro-pueblo);
+    font-family: var(--fuente-fuerte);
+    padding: 10px 0;
+    overflow: hidden;
+    border-bottom: 4px solid var(--rojo-soviet);
+}
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: marchar 25s linear infinite;
+}
+
+.ticker span {
+    padding-right: 50px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+@keyframes marchar {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+/* --- HERO HEADER CONSTRUCTIVISTA --- */
+.hero-header {
+    background: var(--rojo-soviet);
+    color: var(--crema-papel);
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    /* Ángulo de corte agresivo típico del arte soviético */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-bottom: 8px solid var(--negro-carbon);
+}
+
+.main-title {
+    font-family: var(--fuente-fuerte);
+    font-size: 7rem;
+    letter-spacing: 5px;
+    color: var(--oro-pueblo);
+    text-shadow: 5px 5px 0px var(--negro-carbon);
+    position: relative;
+    display: inline-block;
+}
+
+/* Efecto glitch decorativo e imponente */
+.main-title::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 2px 0 red;
+    top: 0;
+    color: var(--crema-papel);
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0); 
+    animation: noise-1 3s infinite linear alternate-reverse;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--crema-papel);
+    text-transform: uppercase;
+}
+
+.star-decor {
+    color: var(--oro-pueblo);
+    font-size: 2rem;
+    margin-top: 15px;
+}
+
+/* --- NAVEGACIÓN --- */
+.soviet-nav {
+    background: var(--negro-carbon);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.soviet-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--crema-papel);
+    text-decoration: none;
+    font-family: var(--fuente-fuerte);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    background: var(--rojo-soviet);
+    color: var(--oro-pueblo);
+    transform: skewX(-10deg); /* Inclinación constructivista */
+    display: inline-block;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* --- GRID DE NOTICIAS DE PERIÓDICO --- */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.featured-card {
+    grid-column: span 2;
+    background: var(--crema-papel);
+    border: 5px double var(--negro-carbon);
+    padding: 30px;
+    position: relative;
+}
+
+.featured-card h2 {
+    font-family: var(--fuente-fuerte);
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.card-badge {
+    background: var(--rojo-soviet);
+    color: var(--oro-pueblo);
+    padding: 5px 10px;
+    display: inline-block;
+    font-family: var(--fuente-fuerte);
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transform: rotate(-2deg);
+}
+
+/* Sello de "Aprobado" estilo tinta soviética */
+.stamp {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    border: 4px dashed var(--rojo-oscuro);
+    color: var(--rojo-oscuro);
+    font-family: var(--fuente-fuerte);
+    font-size: 1.8rem;
+    padding: 5px 15px;
+    transform: rotate(-15deg);
+    opacity: 0.8;
+    user-select: none;
+}
+
+.standard-card {
+    background: var(--crema-papel);
+    border: 2px solid var(--negro-carbon);
+    padding: 20px;
+}
+
+.standard-card h3 {
+    font-family: var(--fuente-fuerte);
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--negro-carbon);
+    padding-bottom: 5px;
+}
+
+.visual-accent {
+    background: var(--negro-carbon);
+    color: var(--oro-pueblo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-number {
+    font-family: var(--fuente-fuerte);
+    font-size: 5rem;
+    color: var(--rojo-soviet);
+    line-height: 1;
+}
+
+/* Separadores */
+.soviet-divider {
+    border: none;
+    height: 8px;
+    background: repeating-linear-gradient(45deg, var(--negro-carbon), var(--negro-carbon) 10px, var(--rojo-soviet) 10px, var(--rojo-soviet) 20px);
+    margin: 50px 0;
+}
+
+/* --- SECCIÓN DEL PLAN QUINQUENAL (GRÁFICA ANIMADA) --- */
+.section-title {
+    font-family: var(--fuente-fuerte);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #e5dac1;
+    padding: 30px;
+    border: 3px solid var(--negro-carbon);
+}
+
+.bar {
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-family: var(--fuente-fuerte);
+    color: white;
+    font-size: 1.1rem;
+}
+
+.bar::before {
+    content: attr(data-label);
+    z-index: 2;
+    text-shadow: 1px 1px 2px black;
+}
+
+.bar-1 {
+    background: #555;
+    width: 25%;
+    animation: crecer-burgues 4s ease-out infinite alternate;
+}
+
+.bar-2 {
+    background: linear-gradient(90deg, var(--rojo-oscuro), var(--rojo-soviet));
+    width: 100%;
+    box-shadow: 0 0 15px rgba(204, 0, 0, 0.5);
+    animation: brillar-proletario 1.5s infinite alternate;
+}
+
+/* --- FORMULARIO DE DENUNCIAS --- */
+.soviet-form {
+    background: var(--crema-papel);
+    border: 4px solid var(--rojo-soviet);
+    padding: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 10px 10px 0px var(--negro-carbon);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    background: transparent;
+    border: 2px solid var(--negro-carbon);
+    padding: 10px;
+    font-family: var(--fuente-maquina);
+    font-size: 1rem;
+    color: var(--negro-carbon);
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    background: rgba(204, 0, 0, 0.05);
+    border-color: var(--rojo-soviet);
+}
+
+.btn-soviet {
+    background: var(--rojo-soviet);
+    color: var(--oro-pueblo);
+    border: none;
+    font-family: var(--fuente-fuerte);
+    font-size: 1.5rem;
+    padding: 12px 25px;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    box-shadow: 5px 5px 0px var(--negro-carbon);
+}
+
+.btn-soviet:hover {
+    background: var(--negro-carbon);
+    color: var(--rojo-soviet);
+    transform: translateY(-2px);
+    box-shadow: 7px 7px 0px var(--rojo-soviet);
+}
+
+/* --- FOOTER --- */
+.soviet-footer {
+    background: var(--negro-carbon);
+    color: var(--crema-papel);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 4px solid var(--oro-pueblo);
+}
+
+.small-text {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* --- ANIMACIONES ADICIONALES --- */
+@keyframes crecer-burgues {
+    0% { width: 25%; }
+    100% { width: 15%; } /* El capitalismo siempre decrece en nuestra web */
+}
+
+@keyframes brillar-proletario {
+    0% { opacity: 0.9; }
+    100% { opacity: 1; filter: brightness(1.2); }
+}
+
+@keyframes noise-1 {
+    0% { clip: rect(20px, 9999px, 66px, 0); }
+    50% { clip: rect(40px, 9999px, 5px, 0); }
+    100% { clip: rect(10px, 9999px, 85px, 0); }
+}
+
+/* --- RESPONSIVE PARA EL SÓVIET GLOBAL --- */
+@media (max-width: 768px) {
+    .main-title { font-size: 4rem; }
+    .news-grid { grid-template-columns: 1fr; }
+    .featured-card { grid-column: span 1; }
+    .soviet-nav ul { flex-direction: column; text-align: center; gap: 10px; }
+}

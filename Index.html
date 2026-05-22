@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПРАВДА - El Diario de la Ciber-Revolución</title>
+    <link rel="stylesheet" href="Pravda.css">
+    <!-- Importamos una fuente robusta y una de máquina de escribir para el toque soviético -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Línea de propaganda marchante (Marquee moderno) -->
+    <div class="ticker-wrapper">
+        <div class="ticker">
+            <span>PROLETARIOS DEL MUNDO, ¡UNÍOS EN EL CÓDIGO!</span>
+            <span>EL PLAN QUINQUENAL DE CSS SE CUMPLIRÁ EN 3 DÍAS</span>
+            <span>0% BUG, 100% PRODUCCIÓN COLECTIVA ☭</span>
+            <span>EL CAPITALISMO DA ERROR 404</span>
+        </div>
+    </div>
+
+    <!-- Encabezado Principal / Constructivista -->
+    <header class="hero-header">
+        <div class="glitch-container">
+            <h1 class="main-title" data-text="ПРАВДА">ПРАВДА</h1>
+            <p class="subtitle">LA VERDAD REVOLUCIONARIA (APROBADA POR EL COMITÉ)</p>
+        </div>
+        <div class="star-decor">★ ★ ★</div>
+    </header>
+
+    <!-- Navegación del Comité Central -->
+    <nav class="soviet-nav">
+        <ul>
+            <li><a href="#noticias" class="nav-link">Noticias del Politburó</a></li>
+            <li><a href="#logros" class="nav-link">Producción de CSS</a></li>
+            <li><a href="#denuncias" class="nav-link">Autocrítica Colectiva</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-container">
+        
+        <!-- Sección de Noticias Tipo Periódico Fuerte -->
+        <section id="noticias" class="news-grid">
+            <article class="featured-card">
+                <div class="card-badge">ÚLTIMA HORA</div>
+                <h2>¡ÉXITO ABSOLUTO! Se decreta la colectivización de las librerías de JavaScript</h2>
+                <p>El camarada Desarrollador Jefe ha firmado el decreto. A partir de hoy, `npm install` es propiedad del Estado. Todo `node_modules` que pese más de 50MB será enviado a Siberia para trabajos forzados de refactorización.</p>
+                <div class="stamp">APROBADO</div>
+            </article>
+
+            <article class="standard-card">
+                <h3>El café del camarada Durán ahora se distribuye según la necesidad de líneas de código</h3>
+                <p>Se acabó el privilegio burgués del Latte Macchiato. El pueblo beberá café negro filtrado en bota militar. Un sorbo por cada 100 líneas escritas sin bugs.</p>
+            </article>
+
+            <article class="standard-card visual-accent">
+                <h3>Estadística Oficial</h3>
+                <div class="stat-number">150%</div>
+                <p>De felicidad garantizada en el nuevo Layout implementado con CSS Grid.</p>
+            </article>
+        </section>
+
+        <hr class="soviet-divider">
+
+        <!-- Sección del Plan Quinquenal (Gráficos abstractos con CSS puro) -->
+        <section id="logros" class="plan-section">
+            <h2 class="section-title">GRÁFICO DEL PROGRESO INEVITABLE</h2>
+            <div class="chart-container">
+                <div class="bar bar-1" data-label="Capitalismo (En decadencia)"></div>
+                <div class="bar bar-2" data-label="Nuestro CSS (Hacia el cosmos)"></div>
+            </div>
+            <p class="chart-caption">Fig 1.1: Demostración empírica e incuestionable de la superioridad de nuestros selectores de clase.</p>
+        </section>
+
+        <hr class="soviet-divider">
+
+        <!-- Formulario de Denuncias / Sátira -->
+        <section id="denuncias" class="form-section">
+            <h2 class="section-title">BUZÓN DE AUTOCRÍTICA Y DENUNCIAS</h2>
+            <form class="soviet-form" onsubmit="event.preventDefault(); alert('Su denuncia ha sido archivada. El Comité la revisará... o no.');">
+                <div class="form-group">
+                    <label for="camarada">Nombre del Camarada (Opcional, pero te estamos mirando):</label>
+                    <input type="text" id="camarada" placeholder="Ej. Iván Ivánovich">
+                </div>
+                <div class="form-group">
+                    <label for="delito">Sospecha de desviación ideológica:</label>
+                    <select id="delito">
+                        <option value="1">Usa modo claro en el editor de código (Burguesía pura)</option>
+                        <option value="2">Hizo un commit directo a 'main' sin permiso del Sóviet</option>
+                        <option value="3">Miró con nostalgia un iPhone</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="detalles">Detalles de la traición:</label>
+                    <textarea id="detalles" rows="4" placeholder="Escriba aquí los secretos de su compañero de cubículo..."></textarea>
+                </div>
+                <button type="submit" class="btn-soviet">ENVIAR AL COMITÉ CENTRAL</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer del Estado -->
+    <footer class="soviet-footer">
+        <p>© 2026 PRAVDA DIGITAL. Todos los bytes pertenecen al pueblo.</p>
+        <p class="small-text">Hecho con furia proletaria y CSS puro. Ningún framework capitalista fue dañado en este proceso.</p>
+    </footer>
+
+</body>
+</html>
