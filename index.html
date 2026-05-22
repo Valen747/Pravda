@@ -9,7 +9,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="soviet-audio-player">
+    <button id="audioBtn" class="audio-toggle-btn">▶ INICIAR MARCHA</button>
+    <audio id="sovietHymn" loop>
+        <source src="https://www.marxists.org/history/ussr/sounds/lyrics/international-ru.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio del pueblo.
+    </audio>
+</div>
 
+<script>
+    const audio = document.getElementById('sovietHymn');
+    const btn = document.getElementById('audioBtn');
+
+    // Forzamos un volumen bajo para no reventar los auriculares del camarada
+    audio.volume = 0.2; 
+
+    btn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            btn.innerHTML = "⏸ SILENCIAR PROLETARIADO";
+            btn.classList.add('playing');
+        } else {
+            audio.pause();
+            btn.innerHTML = "▶ INICIAR MARCHA";
+            btn.classList.remove('playing');
+        }
+    });
+</script>
     <!-- Línea de propaganda marchante (Marquee moderno) -->
     <div class="ticker-wrapper">
         <div class="ticker">
