@@ -11,17 +11,17 @@
 
     <div class="ticker-wrapper">
         <div class="ticker">
-            <span>PROLETARIOS DEL MUNDO, ¡UNÍOS EN EL CÓDIGO! 🛠️</span>
-            <span>EL PLAN QUINQUENAL DE CSS SE CUMPLIRÁ EN 3 DÍAS 📈</span>
+            <span>PROLETARIOS DEL MUNDO, ¡UNÍOS EN EL CÓDIGO! </span>
+            <span>EL PLAN QUINQUENAL DE CSS SE CUMPLIRÁ EN 3 DÍAS </span>
             <span>0% BUG, 100% PRODUCCIÓN COLECTIVA ☭</span>
-            <span>EL CAPITALISMO DA ERROR 404 🚫</span>
+            <span>EL CAPITALISMO DA ERROR 404 </span>
         </div>
     </div>
 
     <header class="hero-header">
         <div class="glitch-container">
             <h1 class="main-title" data-text="ПРАВДА">ПРАВДА</h1>
-            <p class="subtitle">LA VERDAD REVOLUCIONARIA (APROBADA POR EL COMITÉ)</p>
+            <p class="subtitle">LA VERDAD REVOLUCIONARIA (APROBADA BY EL COMITÉ)</p>
         </div>
         <div class="star-decor">★ ★ ★</div>
     </header>
@@ -100,10 +100,10 @@
         <p class="small-text">Hecho con furia proletaria y CSS puro. Ningún framework capitalista fue dañado en este proceso.</p>
     </footer>
 
-    <div class="soviet-audio-player" style="position: fixed; bottom: 20px; right: 20px; z-index: 99999;">
+    <div class="soviet-audio-player">
         <button id="audioBtn" class="audio-toggle-btn">▶ INICIAR MARCHA</button>
         <audio id="sovietHymn" loop>
-            <source src="https://openweb.rm.ingv.it/sounds/italiano.mp3" type="audio/mpeg">
+            <source src="https://www.marxists.org/history/ussr/sounds/lyrics/international-ru.mp3" type="audio/mpeg">
             Tu navegador no soporta el audio del pueblo.
         </audio>
     </div>
@@ -112,19 +112,13 @@
         const audio = document.getElementById('sovietHymn');
         const btn = document.getElementById('audioBtn');
 
-        audio.volume = 0.25; 
+        audio.volume = 0.2; 
 
         btn.addEventListener('click', () => {
             if (audio.paused) {
-                audio.play()
-                    .then(() => {
-                        btn.innerHTML = "⏸ SILENCIAR PROLETARIADO";
-                        btn.classList.add('playing');
-                    })
-                    .catch(error => {
-                        console.log("Error de reproducción:", error);
-                        alert("¡Camarada! Haz clic primero en cualquier texto de la pantalla y luego vuelve a intentar presionar el botón.");
-                    });
+                audio.play();
+                btn.innerHTML = "⏸ SILENCIAR PROLETARIADO";
+                btn.classList.add('playing');
             } else {
                 audio.pause();
                 btn.innerHTML = "▶ INICIAR MARCHA";
